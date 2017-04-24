@@ -1,4 +1,4 @@
-var test = require('tape');
+const test = require('tape');
 
 test('First test!', t => {
   // TODO: tdd
