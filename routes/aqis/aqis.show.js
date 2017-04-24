@@ -1,9 +1,10 @@
 const data = require('data.json');
+const Aqi = require('../models/Aqi');
 
 module.exports = (req, res) => {
-  let aqis = data; // TODO: retrieve data from db
   let id = req.params.id;
-  let aqis = aqis.filter(aqi => aqi.id === id);
   
-  res.status(200).json({ aqis })
+  Aqi.find({ 'id': id }, (aqis) => {
+    res.status(200).json({ aqis })
+  });
 };

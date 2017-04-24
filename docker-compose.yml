@@ -1,0 +1,17 @@
+version: '2'
+services:
+  db:
+    image: mongo:3.0.17
+    ports: 
+      - "27017:27017"
+
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - db
+    environment:
+      - DB_PATH=mongodb://db:27017/api-experiment
+    volumes:
+      - .:/usr/src/app
