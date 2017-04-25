@@ -6,7 +6,7 @@ module.exports = (req, res) => {
   
   if (timeframe) {
     Aqi.find({ 'id': id }, (aqis) => {
-      res.status(200).json({ aqis })
+      res.status(200).json({ aqis });
     });
     // let last = (timeframe === 'day') ? 1dayago : 1weekago;
     

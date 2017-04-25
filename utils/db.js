@@ -7,7 +7,7 @@ module.exports = {
     MongoClient.connect(url, (err, db) => {
       _db = db;
       
-      cb(_db)
+      cb(_db);
     });
   },
   remove: collection => {
@@ -16,4 +16,4 @@ module.exports = {
   getDb: () => {
     return _db;
   }
-}
+};

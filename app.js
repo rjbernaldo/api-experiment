@@ -10,8 +10,6 @@ app.use(controllers);
 
 db.connect(() => {
   app.listen(PORT, () => {
-    console.log('App listening at PORT ' + PORT)
+    console.log('App listening at PORT ' + PORT);
   });
-})
-
-
+});
