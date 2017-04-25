@@ -12,17 +12,70 @@ A project to test out new technologies
 
   4. Dockerizing the app is a plus
 
-## Commands
+## Usage
 
-  1. Start server
+  1. Generate seed data
+  ```
+  $ docker-compose run api npm run seed
+  
+    DB populated with 1000 entries
+  ```
+
+  2. Start database & server
   ```
   $ docker-compose up
   ```
-
-  2. Run tests
+  
+  3. Get all data
   ```
-  $ docker-compose run api npm test
+  $ curl 'localhost:3000/aqis'
+  
+    {
+      "aqis": [
+        ...
+      ]
+    }
+  ```
+    
+  4. Get data aggregated by day (hourly resolution)
+  ```
+  $ curl 'localhost:3000/aqis?timeframe=day'
+  
+    {
+      "aqis": [
+        {
+          "_id": {
+            "hour": 2
+          }, 
+          "averageAqi": 35,
+          "count":3
+        },
+        ...
+      ]
+    }
+  ```
+  
+  5. Get data aggregated by week (daily resolution)
+  ```
+  $ curl 'localhost:3000/aqis?timeframe=week'
+  
+    {
+      "aqis": [
+        {
+          "_id": {
+            "day": 22,
+            "month": 4
+          }, 
+          "averageAqi": 40.70,
+          "count":3
+        },
+        ...
+      ]
+    }
   ```
 
-## Results
+## Tests
+
+  1. Tests are run via `docker-compose run api npm run test`
+  
 ![alt tag](https://raw.githubusercontent.com/rjbernaldo/api-experiment/master/screenshot.png)

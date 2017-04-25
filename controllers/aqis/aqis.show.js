@@ -1,5 +1,4 @@
-const data = require('data.json');
-const Aqi = require('../models/Aqi');
+const Aqi = require('../../models/Aqi');
 
 module.exports = (req, res) => {
   let id = req.params.id;
