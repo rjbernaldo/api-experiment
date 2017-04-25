@@ -2,7 +2,7 @@
   "name": "api-experiment",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "tape 'tests/**/*.js' | tap-spec",
     "init": "node ./seed.js"
