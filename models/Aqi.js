@@ -6,6 +6,6 @@ module.exports = {
     
     _db.collection('api-experiment').find({}).toArray((err, docs) => {
       cb(docs);
-    })
+    });
   }
 };
