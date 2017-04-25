@@ -2,7 +2,7 @@ const test = require('tape');
 const seed = require('../../../utils/seed');
 const db = require('../../../utils/db');
 
-test('aqis', t => {
+test('aqis controller', t => {
   t.plan(2);
   
   seed.populateDb('month', () => {

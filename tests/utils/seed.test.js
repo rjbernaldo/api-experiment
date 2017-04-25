@@ -2,7 +2,7 @@ const test = require('tape');
 const seed = require('../../utils/seed');
 const db = require('../../utils/db');
 
-test('seed', t => {
+test('seed util', t => {
   t.plan(6);
   
   seed.populateDb(null, (data) => {

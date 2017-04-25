@@ -1,7 +1,7 @@
 const test = require('tape');
 const db = require('../../utils/db');
 
-test('db', t => {
+test('db util', t => {
   t.plan(2);
   
   db.connect(_db => {

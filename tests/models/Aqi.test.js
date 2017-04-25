@@ -3,7 +3,7 @@ const seed = require('../../utils/seed');
 const db = require('../../utils/db');
 const Aqi = require('../../models/Aqi');
 
-test('Aqi', t => {
+test('Aqi model', t => {
   t.plan(1);
   
   seed.populateDb('month', () => {
