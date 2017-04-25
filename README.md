@@ -76,6 +76,6 @@ A project to test out new technologies
 
 ## Tests
 
-  1. Tests are run via `docker-compose run api npm run test`
+  1. Tests are run via `docker-compose run api npm test`
   
 ![alt tag](https://raw.githubusercontent.com/rjbernaldo/api-experiment/master/screenshot.png)
