@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = process.env.DB_PATH;
-const _db;
+var _db;
 
 module.exports = {
   connect: (cb) => {

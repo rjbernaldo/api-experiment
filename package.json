@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "node test | tap-spec",
+    "test": "tape 'tests/**/*.js' | tap-spec",
     "init": "node ./seed.js"
   },
   "repository": {
@@ -20,7 +20,9 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "mongodb": "^2.2.26",
+    "mongodb": "^2.2.26"
+  },
+  "devDependencies": {
     "supertest": "^3.0.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3"
