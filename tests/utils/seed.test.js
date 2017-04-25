@@ -3,11 +3,23 @@ const seed = require('../../utils/seed');
 const db = require('../../utils/db');
 
 test('seed', t => {
-  t.plan(2);
+  t.plan(6);
   
-  // TODO: should generate data
-  t.ok(false);
+  seed.populateDb(null, (data) => {
+    t.equals(data.length, 1, 'should populate db with a single entry');
+    
+    db.remove('api-experiment');
+  });
   
-  // TODO: should follow the correct format
-  t.ok(false);
+  seed.populateDb('month', (data) => {
+    t.notEquals(data.length, 1, 'should populate db with a months worth of entries');
+    
+    db.remove('api-experiment');
+  });
+  
+  let result = seed.generateData();
+  t.ok(result.data, 'data should exist')
+  t.ok(result.data.aqi, 'aqi should exist');
+  t.ok(result.data.time.s, 'string time should exist');
+  t.ok(result.data.time.v, 'unix time should exist');
 });

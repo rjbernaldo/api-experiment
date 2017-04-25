@@ -4,10 +4,10 @@ const db = require('../../utils/db');
 test('db', t => {
   t.plan(2);
   
-  db.connect(database => {
-    t.ok(db);
-    t.ok(db.getDb());
+  db.connect(_db => {
+    t.ok(_db, 'should create a new connection');
+    t.ok(db.getDb(), 'should return the existing connection');
     
-    database.close();
+    _db.close();
   })
 })
