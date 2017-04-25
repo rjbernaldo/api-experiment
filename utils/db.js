@@ -10,8 +10,8 @@ module.exports = {
       cb(_db);
     });
   },
-  remove: collection => {
-    _db.collection(collection).remove();
+  remove: (collection, cb = () => {}) => {
+    _db.collection(collection).remove({}, cb);
   },
   getDb: () => {
     return _db;
