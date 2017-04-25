@@ -2,6 +2,9 @@
 
 A project to test out new technologies
 
+## Results
+![alt tag](https://raw.githubusercontent.com/rjbernaldo/api-experiment/master/screenshot.png)
+
 ## Project Specifications
 
   1. Collect air quality data for Amsterdam from an API http://aqicn.org/json-api/doc/
@@ -11,8 +14,6 @@ A project to test out new technologies
   3. Make an init script which would fill the database with dummy data for 1 month
 
   4. Dockerizing the app is a plus
-
-## Results
 
 ## Commands
 
