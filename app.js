@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const routes = express.Router();
 const PORT = process.env.PORT || 3000;
+const controllers = require('./controllers');
 const db = require('./utils/db');
 
 app.use(bodyParser.json());
-app.use(routes);
+app.use(controllers);
 
 db.connect(() => {
   app.listen(PORT, () => {
