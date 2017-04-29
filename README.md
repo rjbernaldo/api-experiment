@@ -1,6 +1,6 @@
 # api-experiment
 
-A project to test out new technologies
+API prototype to test out new technologies
 
 ## Project Specifications
 
