@@ -1,4 +1,4 @@
-# api-experiment
+# `API Experiment`
 
 API prototype to test out new technologies
 
